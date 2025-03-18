@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LATIHAN ONE PAGE</title>
+    <style>
+        body {
+            margin: auto;
+            width: 1024px;
+            background-color: rgb(86, 44, 202);
+            padding-top: 100px; /* Memberi ruang agar konten tidak tertutupi header fixed */
+        }
+
+        /* Menu Header fixed */
+        #header {
+            position: fixed; /* Membuat menu tetap berada di atas */
+            top: 0;
+            left: 0;
+            width: 100%; /* Membuat header mengisi lebar layar */
+            height: 100px;
+            background-color: rgb(145, 212, 20); 
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            font-size: 24px;
+            z-index: 1000; /* Menjaga menu berada di atas konten lainnya */
+        }
+
+        /* Styling untuk link dalam header */
+        #header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        /* Styling untuk navbar */
+        #navbar {
+            background-color: #333; /* Black background color */
+            position: fixed; /* Make it stick/fixed */
+            top: -50px; /* Hide the navbar 50px outside of the top view */
+            width: 100%; /* Full width */
+            transition: top 0.3s; /* Transition effect when sliding down (and up) */
+            z-index: 999; /* Menjaga navbar berada di atas konten */
+        }
+
+        /* Style the navbar links */
+        #navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+        }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Mengatur bagian atas */
+        #atas {
+            height: 750px;
+            background-color: rgb(202, 100, 31); 
+            color: white;
+            text-align: center;
+            line-height: 750px;
+            font-size: 30px;
+        }
+
+        /* Mengatur bagian bawah */
+        #bawah {
+            height: 750px;
+            background-color: rgb(12, 204, 198); 
+            color: white;
+            text-align: center;
+            line-height: 750px;
+            font-size: 24px;
+        }
+
+        /* Mengatur footer */
+        #footer {
+            height: 550px;
+            background-color: rgb(143, 19, 19); 
+            color: white;
+            text-align: center;
+            line-height: 550px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Header -->
+    <div id="header">
+        <a href="#atas">A T A S</a> || 
+        <a href="#bawah">B A W A H</a> || 
+        <a href="#footer">F O O T E R</a>
+    </div>
+
+    <!-- Fixed Navbar -->
+    <div id="navbar">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div id="atas">
+        ini space atas
+    </div>
+
+    <div id="bawah">
+        ini space bawah
+    </div>
+
+    <div id="footer">
+        ini space kaki/footer
+    </div>
+
+    <script>
+        // JavaScript untuk menampilkan navbar saat scroll
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("navbar").style.top = "0"; // Menampilkan navbar
+            } else {
+                document.getElementById("navbar").style.top = "-50px"; // Menyembunyikan navbar
+            }
+        }
+    </script>
+</body>
+</html>

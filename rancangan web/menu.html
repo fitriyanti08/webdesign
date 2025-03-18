@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+            border: 4px solid rgb(227, 13, 13);
+            padding: 8px; 
+            background-color: #00ff51;
+        }
+        .header, .menu, .content, .navigasi {
+            background-color: rgb(103, 9, 235); 
+            border: 1px solid rgb(144, 219, 16);
+        }
+        .header {
+            height: 128px; 
+            padding: 16px; 
+        }
+        .menu {
+            height: 48px;
+            padding: 8px; 
+            margin-top: 8px; 
+        }
+        .content, .navigasi {
+            padding: 16px;
+        }
+        .content {
+            flex: 1;
+            margin-right: 8px; 
+        }
+        .navigasi {
+            width: 33.3333%;
+        }
+        .flex {
+            display: flex;
+            margin-top: 8px;
+            height: 400px;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .font-bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="text-center font-bold">HEADER</h1>
+        </header>
+        <nav class="menu">
+            <h2 class="text-center font-bold">MENU</h2>
+            <ul class="text-center">
+                <li><a href="#home" style="color: white;">Home</a></li>
+                <li><a href="#about" style="color: white;">About</a></li>
+                <li><a href="#services" style="color: white;">Services</a></li>
+                <li><a href="#contact" style="color: white;">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="flex">
+            <main class="content">
+                <h2 class="text-center font-bold">CONTENT</h2>
+                <p>Ini adalah konten utama dari halaman. Anda dapat menambahkan teks, gambar, atau elemen lainnya di sini.</p>
+            </main>
+            <aside class="navigasi">
+                <h2 class="text-center font-bold">NAVIGASI</h2>
+                <ul>
+                    <li><a href="#link1" style="color: white;">Link 1</a></li>
+                    <li><a href="#link2" style="color: white;">Link 2</a></li>
+                    <li><a href="#link3" style="color: white;">Link 3</a></li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+</body>
+</html>
